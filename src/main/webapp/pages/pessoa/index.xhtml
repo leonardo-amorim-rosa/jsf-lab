@@ -27,7 +27,8 @@
                 <p:commandButton value="Salvar" actionListener="#{pageController.salvar()}" icon="ui-icon-disk" styleClass="ui-priority-primary"
                                  update="@this pnlCadastroPessoa dtPessoa" process="@this pnlCadastroPessoa" />
                 <p:commandButton value="Excluir" actionListener="#{pageController.excluir()}" icon="ui-icon-trash"
-                                 update="@this pnlCadastroPessoa dtPessoa" process="@this pnlCadastroPessoa" />
+                                 update="@this pnlCadastroPessoa dtPessoa" process="@this pnlCadastroPessoa" 
+                                 onclick="return confirm('Deseja realmente excluir esse item?')"/>
             </p:panel>
             
             

@@ -13,7 +13,6 @@ import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-import javax.validation.constraints.Size;
 
 @Entity
 @Table(name = "pessoas")
@@ -26,16 +25,13 @@ public class Pessoa implements Serializable {
     @Basic(optional = false)
     @Column(name = "id")
     private Long id;
-    @Size(max = 255)
     @Column(name = "cpf")
     private String cpf;
     @Column(name = "nascimento")
     @Temporal(TemporalType.DATE)
     private Date nascimento;
-    @Size(max = 255)
     @Column(name = "nome")
     private String nome;
-    @Size(max = 255)
     @Column(name = "rg")
     private String rg;
 
